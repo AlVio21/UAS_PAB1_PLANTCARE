@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cached_network_image: ^3.4.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -58,7 +59,10 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - images/
+    - images/monstera.jpg
+    - images/lidah_buaya.jpg
+    - images/lemon_tree.jpg
+   
 
   # To add assets to your application, add an assets section, like this:
   # assets:

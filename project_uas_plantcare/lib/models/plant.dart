@@ -8,6 +8,8 @@ class Plant {
   final String imageAsset;
   final List<String> imageUrls;
   final bool isFavorite;
+  final String waterNeeds;  // tambah ini 
+  final String sunlight; // tambah ini 
 
   Plant({
     required this.name,
@@ -18,6 +20,8 @@ class Plant {
     required this.type,
     required this.imageAsset,
     required this.imageUrls,
+    this.waterNeeds = '', // beri nilai default
+    this.sunlight= '', // beri nilai default 
     this.isFavorite = false,
   });
 }
