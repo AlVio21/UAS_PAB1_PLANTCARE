@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('project_uas_plantcare Home'),
+        title: const Text('Home'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -59,15 +59,15 @@ class HomeScreen extends StatelessWidget {
                           child: Text(
                             plant.name,
                             style: const TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                              fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 16, top: 8),
                           child: Text(
-                            plant.category,
+                            plant.type,
                             style: const TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.bold),
+                              fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ],

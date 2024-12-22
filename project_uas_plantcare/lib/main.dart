@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wisata Candi',
+      title: 'Plant Care',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(color: Colors.deepPurple),

@@ -1,8 +1,8 @@
-import 'package:project_uas_plantcare/screens/home_screen.dart';
-import 'package:project_uas_plantcare/screens/search_screen.dart';
-import 'package:project_uas_plantcare/screens/favorite_screen.dart';
-import 'package:project_uas_plantcare/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:project_uas_plantcare/screens/favorite_screen.dart';
+import 'package:project_uas_plantcare/screens/home_screen.dart';
+import 'package:project_uas_plantcare/screens/profile_screen.dart';
+import 'package:project_uas_plantcare/screens/search_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -33,13 +33,13 @@ class _MainScreenState extends State<MainScreen> {
       body: _screenOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          // Home item
+          // Item pertama
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          // Search item
+          // Item kedua
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-          // Favorite item
+          // Item ketiga
           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorite'),
-          // Profile item
+          // Item keempat
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
         currentIndex: _selectedIndex,
