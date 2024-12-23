@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:project_uas_plantcare/models/plant.dart';
+import 'package:project_uas_plantcare/screens/encyclopedia_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -163,6 +164,39 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     const SizedBox(height: 8),
                     Text(widget.plant.careInstructions),
+                    const SizedBox(height: 16),
+                    const Divider(color: Colors.green),
+                    const SizedBox(height: 16),
+                    // Encyclopedia Section
+                    const Text(
+                      'Encyclopedia',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EncyclopediaScreen(
+                              encyclopedia: widget.plant.encyclopedia,
+                            ),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'Klik di sini untuk membaca lebih lanjut tentang ${widget.plant.name}',
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

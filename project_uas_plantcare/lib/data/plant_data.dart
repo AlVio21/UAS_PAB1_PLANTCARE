@@ -15,6 +15,8 @@ var plantList = [
       'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRztCfL03iEmfwQ5cZzVuoiwemTxj7w_WcxD0qlTJEbtz6CR113t-PPMdHGgBEYm_Kf7I8JlIBcD2Un9DRRo0VGkXhoe3PXD-r6MDp8JDI',
       'https://i0.wp.com/media.dekoruma.com/article/2018/10/08134210/shutterstock_1075161506.jpg?resize=1000%2C668&ssl=1',
     ],
+    encyclopedia:
+        'Monstera berasal dari hutan tropis Amerika Tengah dan dikenal dengan sebutan "Swiss Cheese Plant" karena bentuk daunnya.',
     isFavorite: false,
   ),
   Plant(
@@ -30,6 +32,8 @@ var plantList = [
       'https://awsimages.detik.net.id/community/media/visual/2019/07/09/0610b7cc-fb23-49c6-9b57-b7834accf61e_43.jpeg?w=600&q=90',
       'https://fahum.umsu.ac.id/blog/wp-content/uploads/2024/06/manfaat-lidah-buaya-untuk-kesehatan-rambut-scaled.jpg',
     ],
+    encyclopedia:
+        'Monstera berasal dari hutan tropis Amerika Tengah dan dikenal dengan sebutan "Swiss Cheese Plant" karena bentuk daunnya.',
     isFavorite: true,
   ),
   Plant(
@@ -46,6 +50,8 @@ var plantList = [
       'https://images.tokopedia.net/img/cache/700/VqbcmM/2021/3/17/2e84f593-388d-41e2-aed6-eadd75cd15d2.jpg',
       'https://akcdn.detik.net.id/visual/2020/08/28/ilustrasi-pohon-lemon_11.jpeg?w=720&q=90',
     ],
+    encyclopedia:
+        'Monstera berasal dari hutan tropis Amerika Tengah dan dikenal dengan sebutan "Swiss Cheese Plant" karena bentuk daunnya.',
     isFavorite: false,
   ),
 ];
