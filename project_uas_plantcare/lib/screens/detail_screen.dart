@@ -1,4 +1,4 @@
-// import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:project_uas_plantcare/models/plant.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -190,16 +190,16 @@ class _DetailScreenState extends State<DetailScreen> {
                             padding: const EdgeInsets.only(right: 8),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              // child: CachedNetworkImage(
-                              //   imageUrl: widget.plant.imageUrls[index],
-                              //   height: 100,
-                              //   width: 100,
-                              //   fit: BoxFit.cover,
-                              //   placeholder: (context, url) =>
-                              //       const CircularProgressIndicator(),
-                              //   errorWidget: (context, url, error) =>
-                              //       const Icon(Icons.error),
-                              // ),
+                              child: CachedNetworkImage(
+                                imageUrl: widget.plant.imageUrls[index],
+                                height: 100,
+                                width: 100,
+                                fit: BoxFit.cover,
+                                placeholder: (context, url) =>
+                                    const CircularProgressIndicator(),
+                                errorWidget: (context, url, error) =>
+                                    const Icon(Icons.error),
+                              ),
                             ),
                           );
                         },
