@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:project_uas_plantcare/screens/detail_screen.dart';
 import 'package:project_uas_plantcare/screens/profile_screen.dart';
 import 'package:project_uas_plantcare/screens/main_screen.dart';
+import 'package:project_uas_plantcare/screens/login_screen.dart';
+import 'package:project_uas_plantcare/screens/register_screen.dart';
 void main() {
   runApp(const MainApp());
 }
@@ -39,7 +41,7 @@ class MainApp extends StatelessWidget {
       // home: FavoriteScreen(),
       // home: SearchScreen(),
       // home: HomeScreen(),
-      home: MainScreen(),
+      home: LoginScreen(),
       );
   }
 }
