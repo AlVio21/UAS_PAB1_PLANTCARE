@@ -38,7 +38,7 @@ var plantList = [
     imageAsset: 'images/lidah_buaya.jpeg',
     imageUrls: [
       'https://awsimages.detik.net.id/community/media/visual/2019/07/09/0610b7cc-fb23-49c6-9b57-b7834accf61e_43.jpeg?w=600&q=90',
-      'https://fahum.umsu.ac.id/blog/wp-content/uploads/2024/06/manfaat-lidah-buaya-untuk-kesehatan-rambut-scaled.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR54iAdYaZ5ghiPh5GQsyOxxPEV2GKX0ODaPQ&s',
     ],
     encyclopedia: '''Lidah Buaya, atau Aloe Vera, adalah tanaman obat yang telah digunakan selama ribuan tahun untuk mengobati berbagai kondisi kulit. Gel dari daunnya dapat digunakan untuk menyembuhkan luka bakar, melembapkan kulit, dan bahkan sebagai bahan dalam produk kecantikan.
 
@@ -63,7 +63,7 @@ var plantList = [
     type: 'Tanaman Buah',
     imageAsset: 'images/lemon.jpeg',
     imageUrls: [
-      'https://fahum.umsu.ac.id/blog/wp-content/uploads/2024/06/manfaat-lidah-buaya-untuk-kesehatan-rambut-scaled.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvpOf_ovNeChXKd2cOSBtwN-JynxyaNoatRg&s',
       'https://akcdn.detik.net.id/visual/2020/08/28/ilustrasi-pohon-lemon_11.jpeg?w=720&q=90',
     ],
     encyclopedia: '''Pohon Lemon adalah tanaman buah yang tidak hanya memberikan buah segar yang kaya vitamin C, tetapi juga dapat digunakan untuk berbagai keperluan kuliner. Buah lemon sering digunakan dalam minuman, makanan penutup, dan sebagai bumbu masakan.
@@ -90,7 +90,7 @@ var plantList = [
     imageAsset: 'images/kaktus.jpeg',
     imageUrls: [
       'https://images.tokopedia.net/img/cache/700/VqbcmM/2021/4/15/33d4423b-8ae8-4b39-9937-e5c16dee27b2.jpg',
-      'https://cdn.rri.co.id/berita/Padang/o/1723788767734-kaktus/vjs4yi5w11f584t.jpeg',
+      'https://cdn.antaranews.com/cache/1200x800/2021/09/10/ekstrak-buah-kaktus-1.jpg',
     ],
     encyclopedia: '''Kaktus adalah tanaman yang berasal dari daerah kering di Amerika. Tanaman ini dikenal dengan kemampuannya menyimpan air dalam batangnya, membuatnya tahan terhadap kondisi kering dan mudah dirawat.
 
@@ -115,7 +115,7 @@ var plantList = [
     type: 'Tanaman Hias',
     imageAsset: 'images/anggrek.jpg',
     imageUrls: [
-      'https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/nawacitapost/2023/07/5fbb4d388d220.jpg',
+      'https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/26/fb25ff12-fe8d-4a64-838f-a1c64b773f54.jpg',
       'https://akcdn.detik.net.id/visual/2020/06/17/ilustrasi-anggrek-1_169.jpeg?w=650',
     ],
     encyclopedia: '''Anggrek adalah tanaman yang berasal dari daerah tropis dan subtropis di seluruh dunia. Tanaman ini dikenal dengan bunga-bunganya yang indah dan beragam warna, menjadikannya pilihan populer untuk dekorasi rumah dan taman.
@@ -169,8 +169,8 @@ var plantList = [
     type: 'Tanaman Hias',
     imageAsset: 'images/lavender.jpg',
     imageUrls: [
-      'https://statik.tempo.co/data/2024/01/20/id_1272924/1272924_720.jpg',
-      'https://mmc.tirto.id/image/otf/640x0/2020/07/29/istock-1193277161_ratio-16x9.jpg',
+      'https://www.myseeds.co/cdn/shop/files/Lavender_Vera_TrueLavender_Lavandulaangustifolia_Herbs002_1024x1024.jpg?v=1696865630',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvtLnbgAeT1Yd7CBbZP8hiZCoK984GuN-YQ&s',
     ],
     encyclopedia: '''Lavender adalah tanaman yang berasal dari daerah Mediterania. Tanaman ini dikenal dengan bunga-bunganya yang harum dan berwarna ungu, sering digunakan dalam aromaterapi dan produk kecantikan.
 

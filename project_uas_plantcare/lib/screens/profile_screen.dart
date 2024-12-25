@@ -13,21 +13,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
   bool isSignedIn = false;
   String fullName = '';
   String userName = '';
-  int favoriteCandiCount = 0;
+  int favoritePlantCount = 0;
   String _loggedInUser = '';
 
   @override
   void initState() {
     super.initState();
-    _loadLoggedInUser();
+    _loadProfileData();
   }
 
-  Future<void> _loadLoggedInUser() async {
+  Future<void> _loadProfileData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> favoritePlants = prefs.getStringList('favoritePlants') ?? [];
     setState(() {
       _loggedInUser = prefs.getString('loggedInUser') ?? 'Guest';
       userName = prefs.getString('userName') ?? _loggedInUser;
       fullName = prefs.getString('fullName') ?? _loggedInUser;
+      favoritePlantCount = favoritePlants.length;
     });
   }
 
@@ -65,7 +67,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: SingleChildScrollView( // Tambahkan ini
+            child: SingleChildScrollView(
               child: Column(
                 children: [
                   Align(
@@ -177,7 +179,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       Expanded(
                         child: Text(
-                          ': $favoriteCandiCount',
+                          ': $favoritePlantCount',
                           style: const TextStyle(fontSize: 18),
                         ),
                       ),
