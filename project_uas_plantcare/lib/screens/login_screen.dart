@@ -29,14 +29,12 @@ class _LoginScreenState extends State<LoginScreen> {
     if (_usernameController.text == registeredUsername &&
         _passwordController.text == registeredPassword) {
       await prefs.setString('loginTime', DateTime.now().toIso8601String());
+      await prefs.setString('loggedInUser', _usernameController.text);
 
-Navigator.pushReplacement(
-  context,
-  MaterialPageRoute(builder: (context) => const MainScreen()),
-);
-
-
-
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const MainScreen()),
+      );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Username atau password salah')),

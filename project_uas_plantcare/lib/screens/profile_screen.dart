@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'login_screen.dart'; // Import the LoginScreen
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -9,25 +11,51 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   bool isSignedIn = false;
-  String fullName = 'Alfredo Kristian';
-  String userName = 'fredo';
+  String fullName = '';
+  String userName = '';
   int favoriteCandiCount = 0;
+  String _loggedInUser = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadLoggedInUser();
+  }
+
+  Future<void> _loadLoggedInUser() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _loggedInUser = prefs.getString('loggedInUser') ?? 'Guest';
+      userName = prefs.getString('userName') ?? _loggedInUser;
+      fullName = prefs.getString('fullName') ?? _loggedInUser;
+    });
+  }
 
   void signIn() {
     setState(() {
       isSignedIn = true;
     });
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+    );
   }
 
   void signOut() {
     setState(() {
       isSignedIn = false;
     });
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+      (Route<dynamic> route) => false,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Profile')),
       body: Stack(
         children: [
           Container(
@@ -158,16 +186,38 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   const SizedBox(height: 20),
                   Divider(color: Colors.deepPurple[100]),
                   const SizedBox(height: 20),
-                  // Bagian tombol
-                  isSignedIn
-                      ? TextButton(
-                          onPressed: signOut,
-                          child: const Text('Sign Out'),
-                        )
-                      : TextButton(
-                          onPressed: signIn,
-                          child: const Text('Sign In'),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 3,
+                        child: Row(
+                          children: const [
+                            Icon(Icons.email, color: Colors.green),
+                            SizedBox(width: 8),
+                            Text(
+                              'Email',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          ': $_loggedInUser',
+                          style: const TextStyle(fontSize: 18),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Divider(color: Colors.deepPurple[100]),
+                  const SizedBox(height: 20),
+                  // Bagian tombol
+                  TextButton(
+                    onPressed: signOut,
+                    child: const Text('Sign Out'),
+                  ),
                 ],
               ),
             ),
